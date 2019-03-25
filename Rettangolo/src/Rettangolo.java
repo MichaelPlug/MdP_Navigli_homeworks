@@ -23,6 +23,38 @@ public class Rettangolo {
 		}
 	}
 	
+	public class Colore {
+
+		private final int NERO = 0;
+		private final int BIANCO = 255;
+		private int r;
+		private int g;
+		private int b;
+		
+		public Colore (int r, int g, int b) {
+		setNero();
+		}
+		
+		public void setBianco() {
+		r=BIANCO;
+		g=BIANCO;
+		b=BIANCO;
+		}
+		
+		public void setNero() {
+		r=NERO;
+		g=NERO;
+		b=NERO;
+		}
+		
+		public void set(int r, int g, int b) {
+		this.r=r;
+		this.g=g;
+		this.b=b;
+		}
+
+	}
+	
 	public Rettangolo(int x, int y) {
 		x1 = 0;
 		x2 = x;
