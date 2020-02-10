@@ -10,6 +10,8 @@ namespace quickstart {
 
         public static REST_URL : string = "nextExample.jsp";
 
+        public static ETICHETTA : string = "Data la seguente parola e il suo iperonimo, definirla nella propria lingua madra";
+
         public static TASK : string = "task=DEFINITION_ANNOTATION";
 
         public static TEXTAREA_PLACEHOLDER : string = "Inserire qui la tua risposta";
@@ -20,7 +22,7 @@ namespace quickstart {
             console.log("creating desct");
             let description : HTMLLabelElement = quickstart.Builder.createDescription();
             let word : HTMLLabelElement = quickstart.Builder.createWord();
-            console.log("creating translation");
+            let divEtichetta : HTMLDivElement = quickstart.Builder.createDivEtichetta(definitionAnnotation.ETICHETTA);
             let answer : HTMLTextAreaElement = quickstart.Builder.createTextArea("answer", definitionAnnotation.TEXTAREA_PLACEHOLDER);
             $.getJSON(definitionAnnotation.REST_URL, definitionAnnotation.TASK, ((description,word) => {
                 return (result, a, ctx) => {
@@ -45,6 +47,7 @@ namespace quickstart {
             $("body").append(divBar);
             $(form).css("margin", "0% 1.5%");
             console.log("adding to form");
+            $(form).append(divEtichetta);
             $(form).append(divWord);
             $(form).append(divDescription);
             $(form).append(divAnswer);

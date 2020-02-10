@@ -10,11 +10,10 @@ namespace quickstart {
 
         public static main(args : string[]) {
             let divBar : HTMLDivElement = Home.createDivBar();
-            $(divBar).css("float", "clear");
             let start : HTMLInputElement = Home.getStarter();
             $("body").css("text-align", "center");
-            $("body").append(start);
             $("body").append(divBar);
+            $("body").append(start);
             $("body").css("margin", "2% 1.5%");
         }
 
