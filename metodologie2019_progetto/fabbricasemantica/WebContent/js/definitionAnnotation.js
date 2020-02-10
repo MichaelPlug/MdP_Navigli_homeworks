@@ -13,7 +13,7 @@ var quickstart;
             console.log("creating desct");
             let description = quickstart.Builder.createDescription();
             let word = quickstart.Builder.createWord();
-            console.log("creating translation");
+            let divEtichetta = quickstart.Builder.createDivEtichetta(definitionAnnotation.ETICHETTA);
             let answer = quickstart.Builder.createTextArea("answer", definitionAnnotation.TEXTAREA_PLACEHOLDER);
             $.getJSON(definitionAnnotation.REST_URL, definitionAnnotation.TASK, ((description, word) => {
                 return (result, a, ctx) => {
@@ -38,6 +38,7 @@ var quickstart;
             $("body").append(divBar);
             $(form).css("margin", "0% 1.5%");
             console.log("adding to form");
+            $(form).append(divEtichetta);
             $(form).append(divWord);
             $(form).append(divDescription);
             $(form).append(divAnswer);
@@ -48,6 +49,7 @@ var quickstart;
     }
     definitionAnnotation.SERVLET_URL = "definitionAnnotation.jsp";
     definitionAnnotation.REST_URL = "nextExample.jsp";
+    definitionAnnotation.ETICHETTA = "Data la seguente parola e il suo iperonimo, definirla nella propria lingua madra";
     definitionAnnotation.TASK = "task=DEFINITION_ANNOTATION";
     definitionAnnotation.TEXTAREA_PLACEHOLDER = "Inserire qui la tua risposta";
     quickstart.definitionAnnotation = definitionAnnotation;
