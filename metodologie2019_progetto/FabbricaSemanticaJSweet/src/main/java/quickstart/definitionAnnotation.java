@@ -24,7 +24,7 @@ public class definitionAnnotation{
 	
 	public static final String SERVLET_URL = "definitionAnnotation.jsp";
 	public static final String REST_URL =  "nextExample.jsp";
-	
+	public static final String ETICHETTA = "Data la seguente parola e il suo iperonimo, definirla nella propria lingua madra";
 	public static final String TASK = "task=DEFINITION_ANNOTATION";
 	public static final String TEXTAREA_PLACEHOLDER = "Inserire qui la tua risposta";
 			
@@ -38,7 +38,8 @@ public class definitionAnnotation{
 
 		HTMLLabelElement word = Builder.createWord();
 		
-		console.log("creating translation");
+		HTMLDivElement divEtichetta = Builder.createDivEtichetta(ETICHETTA);
+
 		HTMLTextAreaElement answer = Builder.createTextArea("answer", TEXTAREA_PLACEHOLDER);
 
 		
@@ -79,6 +80,7 @@ public class definitionAnnotation{
 		
 		console.log("adding to form");
 		// aggiungiamo tutti gli elementi alla form, l'ordine e' importante
+		$(form).append(divEtichetta);
 		$(form).append(divWord);
 		$(form).append(divDescription);
 		$(form).append(divAnswer);

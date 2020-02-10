@@ -135,7 +135,7 @@ public class Builder {
 	 * 
 	 * @param value valore associato alla casella
 	 * @param name nome della checkbox
-	 * @return
+	 * @return checkbox
 	 */
 	protected static HTMLInputElement getCheckbox(String value, String name) {
 		return getCheckbox(value, name, false);
@@ -159,9 +159,8 @@ public class Builder {
 	/**
 	 * La funzione ritorna una checkbox
 	 * 
-	 * 	@param value valore associato alla casella
-	 * @param name nome della checkbox
-s	 * @param isChecked - booleano che determina se la casella sia spuntata o meno
+	 * @param value valore associato alla casella
+s	 * @param isChecked booleano che determina se la casella sia spuntata o meno
 	 * @return checkbox
 	 */
 	protected static HTMLInputElement getCheckbox(String value, Boolean isChecked) {
@@ -173,8 +172,8 @@ s	 * @param isChecked - booleano che determina se la casella sia spuntata o meno
 	}
 	/**
 	 * la funzione ritorna una checkbox
-	 * @param value 
-	 * @param name nome 
+	 * @param value valore associato alla cesella
+	 * @param name nome della casella
 	 * @param isChecked booleano che determina se la checkbox sia spuntata o meno
 	 * @return checkbox
 	 */
@@ -260,8 +259,8 @@ s	 * @param isChecked - booleano che determina se la casella sia spuntata o meno
 	}
 	/**
 	 * Viene generata un'area di testo 
-	 * @param nome - nome del'area di testo
-	 * @param placeHolder - testo visualizzato all'interno della casella prima della sua riscrittura da parte dell'utente
+	 * @param nome nome del'area di testo
+	 * @param placeholder testo visualizzato all'interno della casella prima della sua riscrittura da parte dell'utente
 	 * @return area di testo
 	 */
 	protected static HTMLTextAreaElement createTextArea(String nome, String placeholder) {
@@ -362,7 +361,7 @@ s	 * @param isChecked - booleano che determina se la casella sia spuntata o meno
 	/**
 	 * La funzione ritorna un oggetto HTMLLabelElement con la formattazione di 
 	 * una risposta possibile risposta
-	 * @param possibile risposta
+	 * @param answerText possibile risposta
 	 * @return HTMLLabelElement con la formattazione di 
 	 * una risposta possibile risposta
 	 */
